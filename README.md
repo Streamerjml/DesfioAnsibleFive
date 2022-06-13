@@ -2,13 +2,13 @@
 Criar uma automação que rode o exercicio anterior Docker via ansible
 
 ### Faça um clone do respodiorio:
-- git clone 'http://respositorio'
+- git clone https://github.com/Streamerjml/DesfioAnsibleFive.git
 
 ### rode o comando do play-book
 - ansible-playbook provisioning.yml
   
-### Docker
-- abra o navegador localhost:8080 para testar a plicação!
+### Teste
+- abra o navegador https://localhost:8080 para testar a aplicação!
 
 ### Pre-requisitos
 > SO Linux (ubuntu)
