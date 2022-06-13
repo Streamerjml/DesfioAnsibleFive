@@ -1,0 +1,23 @@
+---
+#Criando play-book simples em conexão local
+- hosts: localhost
+  connection: local
+  become: yes #adicionado este paramantro pra rodar como root
+  tasks:
+  # passo de instalação do docker!
+    - name: 'Instalar Docker'
+      apt:
+        name: docker
+        state: latest
+
+    # passo de clonagem do repositorio
+    - name: 'Clonar Repositorio'
+      shell: 'git clone https://github.com/Streamerjml/Desafio-FIve-Academy.git'
+
+    # altera as permissões do reporisotório para que sejam usados
+    - name: 'Alterar as permiçoes do repostirotio'
+      shell: 'chmod 777 Desafio-FIve-Academy'
+    
+    # excuta o docker-compose fazendo o downlod das imegens e rodando a aplicação 
+    - name: 'Fazendo o Build do Docker Compose e rodando a aplicação'
+      shell: 'cd Desafio-FIve-Academy && docker-compose build && docker-compose up -d'
