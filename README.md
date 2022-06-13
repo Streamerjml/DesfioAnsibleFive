@@ -1,4 +1,3 @@
-# Desafio do Ansible
 # Desafio Ansible Five
 Criar uma automação que rode o exercicio anterior Docker via ansible
 
